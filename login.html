@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Loguin</title>
+    <style>
+        body{
+            font-family: montserrat, helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, yellow);
+        }
+        .login {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+        .voltar {
+            font-size: 10px;
+            position: absolute;
+            top: 73%;
+            left: 43%;
+            font-size: 12px;
+        }
+        .voltar:hover{
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<script>
+    function Login() {
+  var done=0;
+  var usuario = document.getElementsByName('usuario')[0].value;
+  usuario=usuario.toLowerCase();
+  var senha= document.getElementsByName('senha')[0].value;
+  seha=senha.toLowerCase();
+  if (usuario=="admin" && senha=="12345") {
+    window.location="sucesso.html";
+    done=1;
+  }
+  if (done==0) { alert("Dados incorretos, tente novamente"); }
+}
+</script>
+
+<body>
+    
+    <div class="login">
+        <h1>Login</h1>
+        <input type="text" placeholder="Nome" name="usuario">
+        <br><br>
+        <input type="password" placeholder="Senha" name="senha">
+        <br><br>
+        <button onclick="Login()">Enviar</button>
+    </div>
+
+    <div class="voltar">
+        <h1 onclick="window.location.href = 'index.html'">Voltar</h1>
+    </div>
+
+
+</body>
+</html>
