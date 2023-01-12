@@ -1,2 +1,2 @@
 # teste_login
-Teste feito para treinamento de login e senha
+Teste feito para treinamento de login e senha.
